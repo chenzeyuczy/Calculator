@@ -5,14 +5,13 @@ import java.util.*;
 
 public class Calculator implements ActionListener {
     
-    private int temp, state;
-    boolean input;
+    private int state, i, att[][];
+    private boolean input;
     private double result, num_front, num_back;
-    JFrame frame;
-    JButton[] num = new JButton[10];
-    JTextField display = new JTextField("0");
+    private JFrame frame;
+    private JButton[] num = new JButton[10];
+    private JTextField display = new JTextField("0");
     private ArrayList<JComponent> GUI_Component;
-    int att[][], i;
     String[] symbol = {"+", "-", "*", "/", "=", ".", "C"};
 
     public Calculator() {
@@ -21,7 +20,7 @@ public class Calculator implements ActionListener {
     }
 
     private void init() {
-        state = temp= 0;
+        state = 0;
         input = false;
         result = num_front = num_back = 0;
         int fill[] = {
